@@ -1,0 +1,21 @@
+<div th:fragment="navbar" xmlns:th="http://www.thymeleaf.org" xmlns:sec="https://www.thymeleaf.org/thymeleaf-extras-springsecurity5">
+    <div class="dropdown">
+        <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Menu
+        </button>
+        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+            <a class="nav-link" th:href="@{'/'}">Home</a>
+            <a class="nav-link" th:href="@{'/draft-results'}">Draft Results</a>
+            <a class="nav-link" th:href="@{'/selected-players'}">Selected Players</a>
+            <a class="nav-link" th:href="@{'/player-list'}" sec:authorize="isAuthenticated()">Player List</a>
+            <a class="nav-link" th:href="@{'/update-selection'}" sec:authorize="isAuthenticated()">Add New Selection</a>
+            <a class="nav-link" th:href="@{'/fix-selection'}" sec:authorize="isAuthenticated()">Fix Mistaken Selection</a>
+            <a class="nav-link" th:href="@{'/upload-entry'}" sec:authorize="isAuthenticated()">Upload Entry CSV</a>
+            <a class="nav-link" th:href="@{'/remove-entry'}" sec:authorize="isAuthenticated()">Delete Entry</a>
+            <a class="nav-link" th:href="@{'/upload-player-list'}" sec:authorize="isAuthenticated()">Upload Player List</a>
+            <form sec:authorize="isAuthenticated()" action="#" th:action="@{/logout}" method="post">
+                <button class="btn btn-primary" type="submit">Logout</button>
+            </form>
+        </div>
+    </div>
+</div>
