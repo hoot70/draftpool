@@ -121,6 +121,7 @@ public class PlayerController {
         for (Selection selection: selectionsByName){
             int score = selection.getPick() - player.getPick();
             selection.setScore(Math.abs(score));
+            selection.setProjectedScore(Math.abs(score));
             if (pick != 37){
             if (score == 0){
                 selection.setCorrect(true);
@@ -141,6 +142,22 @@ public class PlayerController {
                 selectionByPickValidation(selection.getSelector(), player.getPick(), player);
             }}
             selectionService.update(selection);
+        }
+        if (pick == 37){
+            List<Player> undrafteds = playerService.getAllBySelectedAndAndPick(true,0);
+
+            for (Player undrafted: undrafteds){
+                List<Selection> missedPicks = selectionService.getAllByPlayerName(undrafted.getPlayerName());
+                for (Selection missedPick: missedPicks){
+                    int score = 37 - missedPick.getPick();
+                    missedPick.setScore(Math.abs(score));
+                    missedPick.setProjectedScore(Math.abs(score));
+                    selectionService.update(missedPick);
+                }
+                undrafted.setPick(pick);
+                undrafted.setTeam(team);
+                playerService.update(undrafted);
+            }
         }
         return "success";
     }
@@ -180,6 +197,7 @@ public class PlayerController {
             selection.setTradeAndTeamCorrect(false);
             selection.setTradeCorrect(false);
             selection.setScore(0);
+            selection.setProjectedScore(37 - selection.getPick());
             selection.setCorrect(false);
             selection.setFailedTrade(false);
             selectionService.update(selection);

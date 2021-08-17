@@ -17,4 +17,6 @@ public interface PlayerRepository extends CrudRepository<Player, Integer> {
     Player findByPick(int pickNumber);
 
     List<Player> findAllBySelected(boolean selected);
+
+    List<Player> findAllBySelectedAndAndPick(boolean selected, int picknumber);
 }

@@ -24,6 +24,8 @@ public class PlayerService {
         return playerRepository.findAllBySelected(selected);
     }
 
+    public List<Player> getAllBySelectedAndAndPick(boolean selected, int pickNumber) {return playerRepository.findAllBySelectedAndAndPick(selected, pickNumber);}
+
     public Player getPlayerByPick(int pickNumber){
         return playerRepository.findByPick(pickNumber);
     }

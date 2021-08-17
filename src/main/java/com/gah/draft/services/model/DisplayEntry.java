@@ -28,4 +28,6 @@ public class DisplayEntry {
     private List<Selection> selections;
 
     private int rank;
+
+    private int projectedScore;
 }

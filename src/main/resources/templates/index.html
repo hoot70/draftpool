@@ -24,6 +24,7 @@
         <th scope="col">Rank</th>
         <th scope="col">Team</th>
         <th scope="col">Score</th>
+        <th scope="col">Projected Score</th>
         <th scope="col">Correct</th>
         <th scope="col" class="hidden-sm-down">Trade And Team Correct (-8)</th>
         <th scope="col" class="hidden-sm-down">Trade Partially Correct (-4)</th>
@@ -37,6 +38,7 @@
         <td><span th:text="${entry.rank}">Rank</span></td>
         <td><a th:href="@{'/show-entry/{name}'(name = ${entry.name})}"><span th:text="${entry.name}">Name</span></a></td>
         <td><span th:text="${entry.score}">Score</span></td>
+        <td><span th:text="${entry.projectedScore}">Projected Score</span></td>
         <td><span th:text="${entry.correct}">Correct</span></td>
         <td class="hidden-sm-down"><span th:text="${entry.tradeAndTeamCorrect}">Trade And Team Correct</span></td>
         <td class="hidden-sm-down"><span th:text="${entry.tradeCorrect}">Trade Correct</span></td>

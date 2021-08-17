@@ -43,4 +43,6 @@ public class Selection {
     private boolean positionCorrect;
 
     private boolean failedTrade;
+
+    private int projectedScore;
 }

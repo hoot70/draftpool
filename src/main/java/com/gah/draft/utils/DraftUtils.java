@@ -9,38 +9,38 @@ public class DraftUtils {
 
 
     public static void loadDraftOrder(){
-        DRAFT_ORDER.put(1, "Bengals");
-        DRAFT_ORDER.put(2, "Redskins");
-        DRAFT_ORDER.put(3, "Lions");
-        DRAFT_ORDER.put(4, "Giants");
-        DRAFT_ORDER.put(5, "Dolphins");
-        DRAFT_ORDER.put(6, "Chargers");
-        DRAFT_ORDER.put(7, "Panthers");
-        DRAFT_ORDER.put(8, "Cardinals");
-        DRAFT_ORDER.put(9, "Jaguars");
-        DRAFT_ORDER.put(10, "Browns");
-        DRAFT_ORDER.put(11, "Jets");
-        DRAFT_ORDER.put(12, "Raiders");
-        DRAFT_ORDER.put(13, "49ers");
-        DRAFT_ORDER.put(14, "Buccaneers");
-        DRAFT_ORDER.put(15, "Broncos");
-        DRAFT_ORDER.put(16, "Falcons");
-        DRAFT_ORDER.put(17, "Cowboys");
+        DRAFT_ORDER.put(1, "Jaguars");
+        DRAFT_ORDER.put(2, "Jets");
+        DRAFT_ORDER.put(3, "49ers");
+        DRAFT_ORDER.put(4, "Falcons");
+        DRAFT_ORDER.put(5, "Bengals");
+        DRAFT_ORDER.put(6, "Dolphins");
+        DRAFT_ORDER.put(7, "Lions");
+        DRAFT_ORDER.put(8, "Panthers");
+        DRAFT_ORDER.put(9, "Broncos");
+        DRAFT_ORDER.put(10, "Cowboys");
+        DRAFT_ORDER.put(11, "Giants");
+        DRAFT_ORDER.put(12, "Eagles");
+        DRAFT_ORDER.put(13, "Chargers");
+        DRAFT_ORDER.put(14, "Vikings");
+        DRAFT_ORDER.put(15, "Patriots");
+        DRAFT_ORDER.put(16, "Cardinals");
+        DRAFT_ORDER.put(17, "Raiders");
         DRAFT_ORDER.put(18, "Dolphins");
-        DRAFT_ORDER.put(19, "Raiders");
-        DRAFT_ORDER.put(20, "Jaguars");
-        DRAFT_ORDER.put(21, "Eagles");
-        DRAFT_ORDER.put(22, "Vikings");
-        DRAFT_ORDER.put(23, "Patriots");
-        DRAFT_ORDER.put(24, "Saints");
-        DRAFT_ORDER.put(25, "Vikings");
-        DRAFT_ORDER.put(26, "Dolphins");
-        DRAFT_ORDER.put(27, "Seahawks");
-        DRAFT_ORDER.put(28, "Ravens");
-        DRAFT_ORDER.put(29, "Titans");
-        DRAFT_ORDER.put(30, "Packers");
-        DRAFT_ORDER.put(31, "49ers");
-        DRAFT_ORDER.put(32, "Chiefs");
+        DRAFT_ORDER.put(19, "WFT");
+        DRAFT_ORDER.put(20, "Bears");
+        DRAFT_ORDER.put(21, "Colts");
+        DRAFT_ORDER.put(22, "Titans");
+        DRAFT_ORDER.put(23, "Jets");
+        DRAFT_ORDER.put(24, "Steelers");
+        DRAFT_ORDER.put(25, "Jaguars");
+        DRAFT_ORDER.put(26, "Browns");
+        DRAFT_ORDER.put(27, "Ravens");
+        DRAFT_ORDER.put(28, "Saints");
+        DRAFT_ORDER.put(29, "Packers");
+        DRAFT_ORDER.put(30, "Bills");
+        DRAFT_ORDER.put(31, "Ravens");
+        DRAFT_ORDER.put(32, "Buccaneers");
     }
 
     public static void loadTeamList(){
@@ -75,7 +75,7 @@ public class DraftUtils {
         TEAM_LIST.add("Seahawks");
         TEAM_LIST.add("Buccaneers");
         TEAM_LIST.add("Titans");
-        TEAM_LIST.add("Redskins");
+        TEAM_LIST.add("WFT");
 
         Collections.sort(TEAM_LIST);
         TEAM_LIST.add("Undrafted");

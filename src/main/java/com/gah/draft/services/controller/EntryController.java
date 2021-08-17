@@ -53,7 +53,9 @@ public class EntryController {
             int positionCorrect = 0;
             int failedTrade = 0;
             int tradeOccurred = 0;
+            int projectedScore = 0;
             for (Selection selection: selections){
+                projectedScore = projectedScore + selection.getProjectedScore();
                 score += selection.getScore();
 
                 if (selection.isCorrect()){
@@ -89,6 +91,7 @@ public class EntryController {
             displayEntry.setTradeAndTeamCorrect(tradeAndTeamCorrect);
             displayEntry.setFailedTrade(failedTrade);
             displayEntry.setTradeOccurred(tradeOccurred);
+            displayEntry.setProjectedScore(projectedScore);
             displayEntries.add(displayEntry);
         }
 
@@ -132,6 +135,7 @@ public class EntryController {
                 for(Selection selection: selections){
                     selection.setSelector(entry.getId());
                     selection.setScore(0);
+                    selection.setProjectedScore(37 - selection.getPick());
                     String playerName = selection.getPlayerName();
                     Player player = playerService.getPlayerByPlayerName(playerName);
                     player.setSelected(true);
